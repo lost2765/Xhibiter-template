@@ -1,0 +1,1228 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: CalSans;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+@font-face {
+  font-family: CalSans;
+  src: url(/src/fonts/CalSans-SemiBold.ttf);
+}
+.header {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  background: rgba(238, 241, 250, 0.9019607843);
+}
+.header .allHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .allHeader .left {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+.header .allHeader .left .logo {
+  width: 150px;
+}
+.header .allHeader .left .logo img {
+  width: 100%;
+}
+.header .allHeader .left .searchInput {
+  width: 300px;
+}
+.header .allHeader .left .searchInput .form {
+  width: 100%;
+  color: #ccc;
+  border-radius: 10px;
+  position: relative;
+}
+.header .allHeader .left .searchInput .form .iconInput {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.header .allHeader .left .searchInput .form input {
+  border: none;
+  outline-color: blue;
+  padding: 13px 40px;
+  width: 100%;
+  border-radius: 10px;
+}
+.header .allHeader .right {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+}
+.header .allHeader .right .links .menu > ul {
+  display: flex;
+  height: 100%;
+}
+.header .allHeader .right .links .menu > ul li.dropdown-li {
+  position: relative;
+}
+.header .allHeader .right .links .menu > ul li.dropdown-li:hover ul {
+  visibility: visible;
+  opacity: 1;
+}
+.header .allHeader .right .links .menu > ul li.dropdown-li ul {
+  position: absolute;
+  background: #fff;
+  min-width: 300px;
+  opacity: 0;
+  visibility: hidden;
+  top: 100%;
+  border-radius: 10px;
+}
+.header .allHeader .right .links .menu > ul li.dropdown-li ul li a {
+  padding: 10px;
+  font-size: 12px;
+  display: block;
+}
+.header .allHeader .right .links .menu > ul li.dropdown-li .greenNew {
+  background: rgb(4, 175, 4);
+  color: #fff;
+  text-transform: uppercase;
+  padding: 4px;
+  border-radius: 5px;
+  margin-left: 20px;
+  font-size: 10px;
+}
+.header .allHeader .right .links .menu > ul li a {
+  color: #000;
+  padding: 30px 12px;
+  display: block;
+}
+.header .allHeader .right .links .menu > ul li a:hover {
+  color: #8358FF;
+}
+.header .allHeader .right .links .menu > ul .dropdown-li2 {
+  position: relative;
+}
+.header .allHeader .right .links .menu > ul .dropdown-li2:hover ul {
+  visibility: visible;
+  opacity: 1;
+}
+.header .allHeader .right .links .menu > ul .dropdown-li2 ul {
+  position: absolute;
+  background: #fff;
+  min-width: 450px;
+  opacity: 0;
+  visibility: hidden;
+  top: 100%;
+  border-radius: 10px;
+}
+.header .allHeader .right .links .menu > ul .dropdown-li2 ul li a {
+  padding: 10px;
+  font-size: 12px;
+  display: block;
+}
+.header .allHeader .right .links .menu > ul .dropdown-li2 .greenNew {
+  background: rgb(4, 175, 4);
+  color: #fff;
+  text-transform: uppercase;
+  padding: 4px;
+  border-radius: 5px;
+  margin-left: 20px;
+  font-size: 10px;
+  display: inline;
+}
+.header .allHeader .right .links .menu > ul .dropdown-li3 {
+  position: relative;
+}
+.header .allHeader .right .links .menu > ul .dropdown-li3:hover ul {
+  visibility: visible;
+  opacity: 1;
+}
+.header .allHeader .right .links .menu > ul .dropdown-li3 ul {
+  position: absolute;
+  background: #fff;
+  min-width: 380px;
+  opacity: 0;
+  visibility: hidden;
+  top: 100%;
+  border-radius: 10px;
+}
+.header .allHeader .right .links .menu > ul .dropdown-li3 ul li a {
+  padding: 10px;
+  font-size: 12px;
+  display: block;
+  margin-right: 100px;
+}
+.header .allHeader .right .links .menu > ul .dropdown-li3 .greenNew {
+  text-transform: uppercase;
+  border-radius: 5px;
+  font-size: 10px;
+  display: inline;
+}
+.header .allHeader .right .links .menu > ul .dropdown-li3 .allContent {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header .allHeader .icons ul {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.header .allHeader .icons ul li.bar-icon {
+  display: none;
+}
+.header .allHeader .icons ul li a {
+  padding: 10px;
+  border-radius: 100%;
+  border: 1px solid #ccc;
+  width: 10%;
+  height: 15%;
+  padding-top: 1rem;
+  background-color: #fff;
+}
+.header .allHeader .icons ul li a:hover {
+  background: #8358FF;
+  color: #fff;
+}
+
+@media (max-width: 576px) {
+  .header .allHeader .left .form {
+    display: none;
+  }
+  .header .allHeader .links {
+    display: none;
+  }
+  .header .allHeader .icons ul li:first-child {
+    display: none;
+  }
+  .header .allHeader .icons ul li.bar-icon {
+    display: block !important;
+  }
+  .header .allHeader .icons ul li.bar-icon a {
+    padding: 14px 15px;
+    color: #000;
+  }
+}
+.buyNft {
+  background-image: url("../images/buyNft/gradient.jpg");
+  padding-top: 10rem;
+  height: 100%;
+  padding-bottom: 5rem;
+}
+.buyNft .allContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.buyNft .allContent .left {
+  margin-left: 100px;
+  width: 50%;
+}
+.buyNft .allContent .left .textNft {
+  width: 55%;
+}
+.buyNft .allContent .left .textNft h1 {
+  font-size: 4.25rem;
+  line-height: normal;
+  color: #131740;
+}
+.buyNft .allContent .left .textNft p {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+.buyNft .allContent .left .textNft .btnsBottom {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-top: 2rem;
+}
+.buyNft .allContent .left .textNft .btnsBottom .upload {
+  background-color: #8358FF;
+  color: #fff;
+  border-radius: 30px;
+  padding: 0.75rem 2rem;
+}
+.buyNft .allContent .left .textNft .btnsBottom .upload:hover {
+  background-color: #7148eb;
+}
+.buyNft .allContent .left .textNft .btnsBottom .explore {
+  box-shadow: 5px 5px 10px rgba(108, 106, 212, 0.25), inset 2px 2px 6px #eef1f9, inset -5px -5px 10px #dfe3ef;
+  color: #8358FF;
+  padding: 0.75rem 2rem;
+  border-radius: 30px;
+  transition: 0.1s ease-in;
+}
+.buyNft .allContent .left .textNft .btnsBottom .explore:hover {
+  background-color: #8358FF;
+  color: #fff;
+  box-shadow: none;
+}
+.buyNft .allContent .right {
+  position: relative;
+}
+.buyNft .allContent .right img {
+  width: 100%;
+  border-radius: 200px;
+  transform: rotate(10deg);
+}
+.buyNft .allContent .right .imgAnimation {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 30px;
+  animation: imgEffect 5s infinite;
+}
+.buyNft .allContent .right .imgAnimation img {
+  width: 100%;
+  transform: rotate(0deg);
+}
+
+@keyframes imgEffect {
+  0% {
+    top: 0px;
+  }
+  50% {
+    top: 50px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+.hotBids {
+  margin-top: 6rem;
+}
+.hotBids .top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.hotBids .top h2 {
+  font-size: 35px;
+}
+.hotBids .top img {
+  max-width: 100%;
+}
+.hotBids .items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 2rem;
+}
+.hotBids .items .item,
+.hotBids .items .itemN {
+  padding: 25px 20px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  width: 20%;
+  transition: 0.1s ease-in;
+}
+.hotBids .items .item:hover,
+.hotBids .items .itemN:hover {
+  box-shadow: 2px 2px 5px 1px rgba(152, 144, 144, 0.75);
+}
+.hotBids .items .item svg,
+.hotBids .items .itemN svg {
+  width: 20px;
+}
+.hotBids .items .item img,
+.hotBids .items .itemN img {
+  max-width: 100%;
+}
+.hotBids .items .item .textContent,
+.hotBids .items .itemN .textContent {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hotBids .items .item .textContent a,
+.hotBids .items .itemN .textContent a {
+  color: #000;
+}
+.hotBids .items .item .textContent a:hover,
+.hotBids .items .itemN .textContent a:hover {
+  color: #7148eb;
+}
+.hotBids .items .item .textContent .right,
+.hotBids .items .itemN .textContent .right {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 5px 3px;
+}
+.hotBids .items .item .info,
+.hotBids .items .itemN .info {
+  margin-top: 1rem;
+}
+.hotBids .items .item .info span,
+.hotBids .items .itemN .info span {
+  color: #615c5c;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.hotBids .items .item .btnBottom,
+.hotBids .items .itemN .btnBottom {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hotBids .items .item .btnBottom .rightIcon,
+.hotBids .items .itemN .btnBottom .rightIcon {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.topCollections {
+  margin-top: 10rem;
+  background-color: #FCFEFD;
+  padding-bottom: 3rem;
+}
+.topCollections .allContent .topText {
+  display: flex;
+  justify-content: center;
+}
+.topCollections .allContent .topText .effect {
+  display: flex;
+  gap: 12px;
+}
+.topCollections .allContent .topText .effect span {
+  font-size: 30px;
+}
+.topCollections .allContent .topText .effect .dropdown-day {
+  position: relative;
+}
+.topCollections .allContent .topText .effect .dropdown-day .days {
+  font-size: 30px;
+}
+.topCollections .allContent .topText .effect .dropdown-day:hover .hoverText {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px);
+}
+.topCollections .allContent .topText .effect .dropdown-day .hoverText {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 200px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(30px);
+  transition: 0.4s ease-in-out;
+  z-index: 4;
+}
+.topCollections .allContent .topText .effect .dropdown-day .hoverText ul {
+  background: #fff;
+  border-radius: 5px;
+  padding: 15px;
+  box-shadow: 2px 2px 5px 1px rgba(152, 144, 144, 0.75);
+}
+.topCollections .allContent .topText .effect .dropdown-day .hoverText ul li {
+  margin-top: 10px;
+}
+.topCollections .allContent .topText .effect .dropdown-day .hoverText ul li a {
+  font-size: 14px;
+  color: #000;
+}
+.topCollections .allContent .items {
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.topCollections .allContent .items .item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 15px 35px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  width: 20%;
+  gap: 20px;
+  transition: 0.1s ease-in;
+}
+.topCollections .allContent .items .item:hover {
+  box-shadow: 2px 2px 5px 1px rgba(152, 144, 144, 0.75);
+}
+.topCollections .allContent .items .item span {
+  font-size: 15px;
+}
+.topCollections .allContent .items .item span a {
+  color: #000;
+}
+.topCollections .allContent .items .item span a:hover {
+  color: #7148eb;
+}
+.topCollections .allContent .items .item p {
+  color: #757575;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  margin-top: 10px;
+}
+.topCollections .allContent .items .item img {
+  max-width: 100%;
+}
+.topCollections .allContent .items .imgContent {
+  position: relative;
+}
+.topCollections .allContent .items .imgNumber {
+  position: absolute;
+  left: -12px;
+  top: 20%;
+  color: #fff;
+  background: #000;
+  border-radius: 100%;
+  padding: 4px 8px;
+  border: 2px solid #fff;
+  font-size: 12px;
+}
+.topCollections .allContent .items .imgNumber2 {
+  position: absolute;
+  left: -12px;
+  top: 60%;
+  color: #fff;
+  background: #10B981;
+  border-radius: 100%;
+  padding: 4px 5px;
+  border: 2px solid #fff;
+  font-size: 12px;
+}
+.topCollections .allContent .items .imgNumber3 {
+  position: absolute;
+  left: 20px;
+  top: 30%;
+  color: #fff;
+  background: #000;
+  border-radius: 100%;
+  padding: 4px 8px;
+  border: 2px solid #fff;
+  font-size: 12px;
+}
+.topCollections .allContent .items .imgNumber4 {
+  position: absolute;
+  left: 20px;
+  top: 53%;
+  color: #fff;
+  background: #10B981;
+  border-radius: 100%;
+  padding: 4px 5px;
+  border: 2px solid #fff;
+  font-size: 12px;
+}
+.topCollections .allContent .btnBottom {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+.topCollections .allContent .btnBottom a {
+  background-color: #8358FF;
+  color: #fff;
+  border-radius: 30px;
+  padding: 0.75rem 2rem;
+  box-shadow: 5px 5px 10px rgba(108, 106, 212, 0.25), inset 2px 2px 6px #a78df0, inset -5px -5px 10px #6336e4;
+  transition: 0.1s ease-in;
+}
+.topCollections .allContent .btnBottom a:hover {
+  box-shadow: 2px 2px 5px 1px rgba(152, 144, 144, 0.75);
+  background: #7148eb;
+}
+
+.Trendingcategories {
+  margin-top: 8rem;
+}
+.Trendingcategories .contentCategory .top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.Trendingcategories .contentCategory .top h2 {
+  font-size: 35px;
+  color: #131740;
+}
+.Trendingcategories .contentCategory .top img {
+  max-width: 100%;
+}
+.Trendingcategories .contentCategory .topContent {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.Trendingcategories .contentCategory .topContent .links ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.Trendingcategories .contentCategory .topContent .links ul li a {
+  border: 1px solid #ccc;
+  padding: 13px;
+  border-radius: 10px;
+  font-size: 13px;
+  color: rgb(90, 93, 121);
+  transition: 0.1s ease-in;
+}
+.Trendingcategories .contentCategory .topContent .links ul li a:hover {
+  background: #6336e4;
+  color: #fff;
+  border-color: transparent;
+}
+.Trendingcategories .contentCategory .topContent .links ul li:first-child a {
+  background: #d4cfcf;
+}
+.Trendingcategories .contentCategory .topContent .links ul li:first-child a:hover {
+  background: #6336e4;
+  color: #fff;
+}
+.Trendingcategories .contentCategory .topContent .right a {
+  color: rgb(90, 93, 121);
+  border: 1px solid #ccc;
+  padding: 13px;
+  border-radius: 10px;
+  font-size: 13px;
+}
+.Trendingcategories .contentCategory .items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 5rem;
+  flex-wrap: wrap;
+}
+.Trendingcategories .contentCategory .items .item {
+  padding: 25px 20px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  width: 20%;
+  transition: 0.1s ease-in;
+  position: relative;
+}
+.Trendingcategories .contentCategory .items .item img {
+  border-radius: 10px;
+}
+.Trendingcategories .contentCategory .items .item:hover {
+  box-shadow: 2px 2px 5px 1px rgba(152, 144, 144, 0.75);
+}
+.Trendingcategories .contentCategory .items .item svg {
+  width: 20px;
+}
+.Trendingcategories .contentCategory .items .item img {
+  width: 100%;
+}
+.Trendingcategories .contentCategory .items .item .textContent {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.Trendingcategories .contentCategory .items .item .textContent a {
+  color: #000;
+}
+.Trendingcategories .contentCategory .items .item .textContent a:hover {
+  color: #7148eb;
+}
+.Trendingcategories .contentCategory .items .item .textContent .right {
+  display: flex;
+  align-items: center;
+  color: #615c5c;
+}
+.Trendingcategories .contentCategory .items .item .info {
+  margin-top: 1rem;
+}
+.Trendingcategories .contentCategory .items .item .info span {
+  color: #615c5c;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.Trendingcategories .contentCategory .items .item .btnBottom {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.Trendingcategories .contentCategory .items .item .btnBottom a {
+  font-size: 13px;
+}
+.Trendingcategories .contentCategory .items .item .btnBottom .rightIcon {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: 0.1s ease-in;
+}
+.Trendingcategories .contentCategory .items .item .btnBottom .rightIcon a {
+  color: #615c5c;
+  font-size: 13px;
+}
+.Trendingcategories .contentCategory .items .item .btnBottom .rightIcon:hover span {
+  color: #6336e4;
+}
+.Trendingcategories .contentCategory .items .item .overlayText {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #615c5c;
+  font-weight: 400;
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  right: 30px;
+  top: 34px;
+  background: #fff;
+  border-radius: 6px;
+  padding: 5px;
+}
+.Trendingcategories .contentCategory .items .item .overlayText span {
+  font-size: 13px;
+}
+
+.createNft .top {
+  text-align: center;
+  margin-top: 6rem;
+}
+.createNft .top h2 {
+  color: #131740;
+  font-size: 35px;
+}
+.createNft .items {
+  display: flex;
+  align-items: center;
+  margin-top: 4rem;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.createNft .items .item {
+  text-align: center;
+  width: calc(25% - 10px);
+}
+.createNft .items .item i {
+  border-radius: 100%;
+  background: #8358FF;
+  color: #fff;
+  padding: 15px;
+  font-size: 20px;
+  border: 14px solid #CDBCFF;
+}
+.createNft .items .item .textContent {
+  margin-top: 1rem;
+}
+.createNft .items .item .textContent h3 {
+  color: #131740;
+}
+.createNft .items .item .textContent p {
+  margin-top: 1rem;
+  color: #72748C;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 30px;
+}
+.createNft .items .item2 {
+  text-align: center;
+  width: calc(25% - 10px);
+}
+.createNft .items .item2 i {
+  border-radius: 100%;
+  background: #10B981;
+  color: #fff;
+  padding: 15px;
+  font-size: 20px;
+  border: 14px solid #C4F2E3;
+}
+.createNft .items .item2 .textContent {
+  margin-top: 1rem;
+}
+.createNft .items .item2 .textContent h3 {
+  color: #131740;
+}
+.createNft .items .item2 .textContent p {
+  margin-top: 1rem;
+  color: #72748C;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 30px;
+}
+.createNft .items .item3 {
+  text-align: center;
+  width: calc(25% - 10px);
+}
+.createNft .items .item3 i {
+  border-radius: 100%;
+  background: #428AF8;
+  color: #fff;
+  padding: 15px;
+  font-size: 20px;
+  border: 14px solid #CDDFFB;
+}
+.createNft .items .item3 .textContent {
+  margin-top: 1rem;
+}
+.createNft .items .item3 .textContent h3 {
+  color: #131740;
+}
+.createNft .items .item3 .textContent p {
+  margin-top: 1rem;
+  color: #72748C;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 30px;
+}
+.createNft .items .item4 {
+  text-align: center;
+  width: calc(25% - 10px);
+}
+.createNft .items .item4 i {
+  border-radius: 100%;
+  background: #ef4444;
+  color: #fff;
+  padding: 15px;
+  font-size: 20px;
+  border: 14px solid #FFD0D0;
+}
+.createNft .items .item4 .textContent {
+  margin-top: 1rem;
+}
+.createNft .items .item4 .textContent h3 {
+  color: #131740;
+}
+.createNft .items .item4 .textContent p {
+  margin-top: 1rem;
+  color: #72748C;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 30px;
+}
+
+.subscribe {
+  margin-top: 6rem;
+  text-align: center;
+}
+.subscribe .allContent .text p {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: rgb(19, 23, 64);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.subscribe .allContent .forms {
+  position: relative;
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 2rem;
+  border-radius: 35px;
+}
+.subscribe .allContent .forms input {
+  padding: 16px 19px;
+  border: 1px solid #ccc;
+  width: 100%;
+  border-radius: 30px;
+  outline: none;
+}
+.subscribe .allContent .forms .btns {
+  position: absolute;
+  right: 10px;
+  top: 16px;
+}
+.subscribe .allContent .forms .btns a {
+  color: #fff;
+  background: #6e40ec;
+  padding: 10px 19px;
+  border-radius: 35px;
+}
+
+@media (max-width: 576px) {
+  .container {
+    width: 95%;
+  }
+  .m-w-100 {
+    width: 100% !important;
+  }
+  .buyNft .allContent {
+    flex-direction: column;
+  }
+  .buyNft .allContent .left {
+    margin-left: 0;
+  }
+  .buyNft .allContent .left .textNft {
+    width: 100%;
+  }
+  .buyNft .allContent .left .textNft h1 {
+    font-size: 40px;
+  }
+  .buyNft .allContent .left .textNft p {
+    font-size: 20px;
+  }
+  .buyNft .allContent .right {
+    width: 80%;
+    margin-top: 3rem;
+  }
+  .buyNft .allContent .right img {
+    max-width: 100%;
+  }
+  .buyNft .allContent .right .imgAnimation {
+    left: 0;
+  }
+  .buyNft .allContent .right .imgAnimation img {
+    width: 100;
+  }
+  .hotBids .items .item {
+    width: 100%;
+  }
+  .hotBids .items .item img {
+    width: 100%;
+  }
+  .hotBids .items .item .right .eth {
+    font-size: 10px;
+  }
+  .hotBids .items .itemN {
+    display: none;
+  }
+  .topCollections .allContent .topText .effect h2 {
+    font-size: 25px;
+  }
+  .topCollections .allContent .items .item {
+    width: 100%;
+  }
+  .Trendingcategories .contentCategory .topContent {
+    justify-content: flex-start;
+  }
+  .Trendingcategories .contentCategory .topContent .links {
+    width: 100%;
+  }
+  .Trendingcategories .contentCategory .topContent .links ul {
+    gap: 10px;
+  }
+  .Trendingcategories .contentCategory .topContent .links ul li a {
+    display: block;
+    padding: 8px;
+  }
+  .Trendingcategories .contentCategory .topContent .right a {
+    display: block;
+    padding: 8px;
+    margin-top: 8px;
+  }
+  .Trendingcategories .contentCategory .items .item {
+    width: 100%;
+  }
+  .subscribe .allContent .forms {
+    width: 100%;
+  }
+}
+.footer {
+  margin-top: 15rem;
+  padding-bottom: 2rem;
+}
+.footer .allFooter {
+  display: flex;
+  justify-content: space-between;
+}
+.footer .allFooter .left .logo {
+  width: 40%;
+}
+.footer .allFooter .left .logo img {
+  width: 100%;
+}
+.footer .allFooter .left ul {
+  display: flex;
+  gap: 20px;
+}
+.footer .allFooter .left ul li i {
+  color: #757575;
+}
+.footer .allFooter .left .txtBottom {
+  margin-top: 1rem;
+  color: #757575;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.footer .allFooter .left .links {
+  margin-top: 2rem;
+}
+.footer .allFooter .left .links a i {
+  font-size: 20px;
+}
+.footer .allFooter .left .links a i:hover {
+  color: #6e40ec;
+}
+.footer .allFooter .right {
+  width: 60%;
+  display: flex;
+  gap: 150px;
+}
+.footer .allFooter .right ul li {
+  line-height: 24px;
+}
+.footer .allFooter .right ul li a {
+  color: #757575;
+  margin-top: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+.footer .allFooter .right ul li a:hover {
+  color: #6e40ec;
+}
+.footer .allFooter .right .linksNft {
+  margin-top: 1rem;
+}
+.footer .allFooter .right h3 {
+  font-size: 14px;
+  color: #131740;
+}
+.footer .bottomFooter {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8rem;
+  color: #757575;
+}
+.footer .bottomFooter p {
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.footer .bottomFooter p a {
+  color: #757575;
+}
+.footer .bottomFooter p a:hover {
+  color: #6e40ec;
+}
+.footer .bottomFooter .right ul li a {
+  color: #757575;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+@media (max-width: 576px) {
+  .footer .allFooter {
+    flex-direction: column;
+  }
+  .footer .allFooter .left {
+    width: 100%;
+  }
+  .footer .allFooter .right {
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 2rem;
+    padding-bottom: 10rem;
+  }
+  .footer .allFooter .right .myAccount {
+    display: none;
+  }
+}
+.header {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  background: rgba(238, 241, 250, 0.9019607843);
+}
+.header .allHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .allHeader .left {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+.header .allHeader .left .logo {
+  width: 150px;
+}
+.header .allHeader .left .logo img {
+  width: 100%;
+}
+.header .allHeader .left .searchInput {
+  width: 300px;
+}
+.header .allHeader .left .searchInput .form {
+  width: 100%;
+  color: #ccc;
+  border-radius: 10px;
+  position: relative;
+}
+.header .allHeader .left .searchInput .form .iconInput {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.header .allHeader .left .searchInput .form input {
+  border: none;
+  outline-color: blue;
+  padding: 13px 40px;
+  width: 100%;
+  border-radius: 10px;
+}
+.header .allHeader .right {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+}
+.header .allHeader .right .links .menu > ul {
+  display: flex;
+  height: 100%;
+}
+.header .allHeader .right .links .menu > ul li.dropdown-li {
+  position: relative;
+}
+.header .allHeader .right .links .menu > ul li.dropdown-li:hover ul {
+  visibility: visible;
+  opacity: 1;
+}
+.header .allHeader .right .links .menu > ul li.dropdown-li ul {
+  position: absolute;
+  background: #fff;
+  min-width: 300px;
+  opacity: 0;
+  visibility: hidden;
+  top: 100%;
+  border-radius: 10px;
+}
+.header .allHeader .right .links .menu > ul li.dropdown-li ul li a {
+  padding: 10px;
+  font-size: 12px;
+  display: block;
+}
+.header .allHeader .right .links .menu > ul li.dropdown-li .greenNew {
+  background: rgb(4, 175, 4);
+  color: #fff;
+  text-transform: uppercase;
+  padding: 4px;
+  border-radius: 5px;
+  margin-left: 20px;
+  font-size: 10px;
+}
+.header .allHeader .right .links .menu > ul li a {
+  color: #000;
+  padding: 30px 12px;
+  display: block;
+}
+.header .allHeader .right .links .menu > ul li a:hover {
+  color: #8358FF;
+}
+.header .allHeader .right .links .menu > ul .dropdown-li2 {
+  position: relative;
+}
+.header .allHeader .right .links .menu > ul .dropdown-li2:hover ul {
+  visibility: visible;
+  opacity: 1;
+}
+.header .allHeader .right .links .menu > ul .dropdown-li2 ul {
+  position: absolute;
+  background: #fff;
+  min-width: 450px;
+  opacity: 0;
+  visibility: hidden;
+  top: 100%;
+  border-radius: 10px;
+}
+.header .allHeader .right .links .menu > ul .dropdown-li2 ul li a {
+  padding: 10px;
+  font-size: 12px;
+  display: block;
+}
+.header .allHeader .right .links .menu > ul .dropdown-li2 .greenNew {
+  background: rgb(4, 175, 4);
+  color: #fff;
+  text-transform: uppercase;
+  padding: 4px;
+  border-radius: 5px;
+  margin-left: 20px;
+  font-size: 10px;
+  display: inline;
+}
+.header .allHeader .right .links .menu > ul .dropdown-li3 {
+  position: relative;
+}
+.header .allHeader .right .links .menu > ul .dropdown-li3:hover ul {
+  visibility: visible;
+  opacity: 1;
+}
+.header .allHeader .right .links .menu > ul .dropdown-li3 ul {
+  position: absolute;
+  background: #fff;
+  min-width: 380px;
+  opacity: 0;
+  visibility: hidden;
+  top: 100%;
+  border-radius: 10px;
+}
+.header .allHeader .right .links .menu > ul .dropdown-li3 ul li a {
+  padding: 10px;
+  font-size: 12px;
+  display: block;
+  margin-right: 100px;
+}
+.header .allHeader .right .links .menu > ul .dropdown-li3 .greenNew {
+  text-transform: uppercase;
+  border-radius: 5px;
+  font-size: 10px;
+  display: inline;
+}
+.header .allHeader .right .links .menu > ul .dropdown-li3 .allContent {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header .allHeader .icons ul {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.header .allHeader .icons ul li.bar-icon {
+  display: none;
+}
+.header .allHeader .icons ul li a {
+  padding: 10px;
+  border-radius: 100%;
+  border: 1px solid #ccc;
+  width: 10%;
+  height: 15%;
+  padding-top: 1rem;
+  background-color: #fff;
+}
+.header .allHeader .icons ul li a:hover {
+  background: #8358FF;
+  color: #fff;
+}
+
+@media (max-width: 576px) {
+  .header .allHeader .left .form {
+    display: none;
+  }
+  .header .allHeader .links {
+    display: none;
+  }
+  .header .allHeader .icons ul li:first-child {
+    display: none;
+  }
+  .header .allHeader .icons ul li.bar-icon {
+    display: block !important;
+  }
+  .header .allHeader .icons ul li.bar-icon a {
+    padding: 14px 15px;
+    color: #000;
+  }
+}/*# sourceMappingURL=style.css.map */
