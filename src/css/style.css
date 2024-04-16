@@ -207,6 +207,13 @@ a {
 }
 
 @media (max-width: 576px) {
+  .header {
+    padding-top: 2rem;
+    width: 100%;
+  }
+  .header .allHeader .left .logo img {
+    width: 300% !important;
+  }
   .header .allHeader .left .form {
     display: none;
   }
@@ -857,6 +864,9 @@ a {
   }
   .m-w-100 {
     width: 100% !important;
+  }
+  .buyNft {
+    background: none;
   }
   .buyNft .allContent {
     flex-direction: column;

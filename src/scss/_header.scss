@@ -242,8 +242,17 @@
 
 @media (max-width:576px) {
     .header {
+        padding-top: 2rem;
+        width: 100%;
+
         .allHeader {
             .left {
+                .logo {
+                    img {
+                        width: 300% !important;
+                    }
+                }
+
                 .form {
                     display: none;
                 }
