@@ -1,9 +1,11 @@
 .footer {
-    margin-top: 15rem;
+    margin-top: 7rem;
+    padding-bottom: 4rem;
 
     .allFooter {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
 
         .left {
             .logo {
@@ -84,7 +86,7 @@
     .bottomFooter {
         display: flex;
         justify-content: space-between;
-        margin-top: 8rem;
+        margin-top: 2rem;
         color: #757575;
 
         p {
@@ -112,8 +114,6 @@
             }
         }
     }
-
-    padding-bottom: 2rem;
 }
 
 
@@ -136,6 +136,26 @@
                 .myAccount {
                     display: none;
                 }
+            }
+        }
+    }
+}
+
+
+
+@media (min-width:576px) and (max-width:768px) {
+    .container {
+        width: 90%;
+    }
+
+    .footer {
+        .allFooter {
+
+            .left {
+                margin-bottom: 2rem;
+            }
+
+            .right {
             }
         }
     }

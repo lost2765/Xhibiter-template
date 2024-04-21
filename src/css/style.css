@@ -231,6 +231,32 @@ a {
     color: #000;
   }
 }
+@media (min-width: 576px) and (max-width: 768px) {
+  .header {
+    height: 100px;
+    padding-top: 2rem;
+    width: 100%;
+  }
+  .header .allHeader {
+    width: 100%;
+  }
+  .header .allHeader .searchInput {
+    display: none;
+  }
+  .header .allHeader .right .links {
+    display: none;
+  }
+  .header .allHeader .right .icons ul li:first-child {
+    display: none;
+  }
+  .header .allHeader .right .icons ul li.bar-icon {
+    display: block !important;
+  }
+  .header .allHeader .right .icons ul li.bar-icon a {
+    padding: 14px 15px;
+    color: #000;
+  }
+}
 .buyNft {
   background-image: url("../images/buyNft/gradient.jpg");
   padding-top: 10rem;
@@ -898,6 +924,7 @@ a {
   }
   .hotBids .items .item {
     width: 100%;
+    padding: 1.1875rem !important;
   }
   .hotBids .items .item img {
     width: 100%;
@@ -939,13 +966,77 @@ a {
     width: 100%;
   }
 }
+@media (min-width: 576px) and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+  .buyNft {
+    width: 100%;
+    background-image: none;
+  }
+  .buyNft .allContent .left {
+    width: 100%;
+    margin-left: 0;
+  }
+  .buyNft .allContent .left .textNft h1 {
+    font-size: 35px;
+  }
+  .hotBids .items .item {
+    width: 40%;
+  }
+  .hotBids .items .item img {
+    width: 100%;
+  }
+  .hotBids .items .itemN {
+    display: none;
+  }
+  .topCollections .allContent .items .item {
+    width: 100%;
+  }
+  .Trendingcategories .contentCategory .topContent {
+    justify-content: center;
+  }
+  .Trendingcategories .contentCategory .topContent .links {
+    width: 60%;
+  }
+  .Trendingcategories .contentCategory .topContent .links ul {
+    gap: 10px;
+  }
+  .Trendingcategories .contentCategory .topContent .links ul li a {
+    display: block;
+    padding: 8px;
+  }
+  .Trendingcategories .contentCategory .topContent .right {
+    width: 100%;
+    margin-left: 138px;
+  }
+  .Trendingcategories .contentCategory .topContent .right a {
+    display: inline-block;
+    padding: 8px;
+    margin-top: 8px;
+  }
+  .Trendingcategories .contentCategory .items .item {
+    width: 70%;
+  }
+  .createNft .items .item,
+  .createNft .items .item2,
+  .createNft .items .item3,
+  .createNft .items .item4 {
+    width: 100%;
+    margin-top: 2rem;
+  }
+  .subscribe .allContent .forms {
+    width: 70%;
+  }
+}
 .footer {
-  margin-top: 15rem;
-  padding-bottom: 2rem;
+  margin-top: 7rem;
+  padding-bottom: 4rem;
 }
 .footer .allFooter {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .footer .allFooter .left .logo {
   width: 40%;
@@ -1001,7 +1092,7 @@ a {
 .footer .bottomFooter {
   display: flex;
   justify-content: space-between;
-  margin-top: 8rem;
+  margin-top: 2rem;
   color: #757575;
 }
 .footer .bottomFooter p {
@@ -1035,5 +1126,13 @@ a {
   }
   .footer .allFooter .right .myAccount {
     display: none;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+  .footer .allFooter .left {
+    margin-bottom: 2rem;
   }
 }/*# sourceMappingURL=style.css.map */

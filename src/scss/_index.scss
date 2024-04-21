@@ -857,6 +857,7 @@
                 }
 
                 width: 100%;
+                padding: 1.1875rem !important;
 
                 .right {
                     .eth {
@@ -870,8 +871,6 @@
             }
         }
     }
-
-
 
     .topCollections {
         .allContent {
@@ -890,8 +889,6 @@
             }
         }
     }
-
-
 
     .Trendingcategories {
         .contentCategory {
@@ -939,4 +936,121 @@
             }
         }
     }
+}
+
+@media (min-width:576px) and (max-width:768px) {
+    .container {
+        width: 90%;
+    }
+
+    .buyNft {
+        width: 100%;
+        background-image: none;
+
+        .allContent {
+            .left {
+                width: 100%;
+                margin-left: 0;
+
+                .textNft {
+                    h1 {
+                        font-size: 35px;
+                    }
+                }
+            }
+        }
+    }
+
+    .hotBids {
+        .items {
+
+            .item {
+                img {
+                    width: 100%;
+                }
+
+                width: 40%;
+            }
+
+            .itemN {
+                display: none;
+            }
+        }
+    }
+
+    .topCollections {
+        .allContent {
+            .items {
+                .item {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .Trendingcategories {
+        .contentCategory {
+            .topContent {
+                justify-content: center;
+
+                .links {
+                    width: 60%;
+
+
+                    ul {
+                        gap: 10px;
+
+                        li {
+                            a {
+                                // gap: 1px;
+                                display: block;
+                                padding: 8px;
+                            }
+                        }
+                    }
+                }
+
+                .right {
+                    width: 100%;
+                    margin-left: 138px;
+
+                    a {
+                        display: inline-block;
+                        padding: 8px;
+                        margin-top: 8px;
+                    }
+                }
+            }
+
+
+            .items {
+                .item {
+                    width: 70%;
+                }
+            }
+        }
+    }
+
+    .createNft {
+        .items {
+
+            .item,
+            .item2,
+            .item3,
+            .item4 {
+                width: 100%;
+                margin-top: 2rem;
+            }
+        }
+    }
+
+    .subscribe{
+        .allContent{
+            .forms{
+                width: 70%;
+            }
+        }
+    }
+
+
 }

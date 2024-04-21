@@ -283,3 +283,58 @@
         }
     }
 }
+
+
+
+
+
+@media (min-width:576px) and (max-width:768px) {
+    .header {
+        height: 100px;
+        padding-top: 2rem;
+        width: 100%;
+
+        .allHeader {
+
+            width: 100%;
+
+            .left {
+                .logo {
+                    a {
+                        img {}
+                    }
+                }
+            }
+
+            .searchInput {
+                display: none;
+            }
+
+            .right {
+
+                .links {
+                    display: none;
+                }
+
+                .icons {
+                    ul {
+                        li {
+                            &:first-child {
+                                display: none;
+                            }
+
+                            &.bar-icon {
+                                display: block !important;
+
+                                a {
+                                    padding: 14px 15px;
+                                    color: #000;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
