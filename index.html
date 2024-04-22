@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="src/css/style.css">
 </head>
 
@@ -15,6 +17,191 @@
 
     <header class="header">
         <div class="container">
+            <div id="menuBurgerContent" class="burgerMenu">
+                <div class="left">
+                    <div class="logo">
+                        <a href="">
+                            <img src="src/images/header/logo.png" alt="">
+                        </a>
+                    </div>
+                    <i id="xActive" class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="searchInput">
+                    <form class="form" action="">
+                        <div class="iconInput">
+                            <span>
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </span>
+                        </div>
+                        <input type="text" placeholder="Search">
+                    </form>
+                </div>
+                <div class="bottomLinks">
+                    <div class="accordion">Home
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <div class="content">
+                        <ul>
+                            <li><a href="">Home 1</a></li>
+                            <li><a href="">Home 1 RTL</a></li>
+                            <li><a href="">Home 2</a></li>
+                            <li><a href="">Home 3</a></li>
+                            <li><a href="">Home 4</a></li>
+                            <li><a href="">Home 5</a></li>
+                            <li><a href="">Home 6</a></li>
+                            <li><a href="">Crypto Consultant</a></li>
+                            <li><a href="">NFT Game</a>
+                                <span>NEW</span>
+                            </li>
+                            <li><a href="">DAO Platform</a>
+                                <span>NEW</span>
+                            </li>
+                            <li><a href="">Crypto App</a>
+                                <span>NEW</span>
+                            </li>
+                            <li><a href="">Crypto Trading</a>
+                                <span>NEW</span>
+                            </li>
+                            <li><a href="">ICO Landing</a>
+                                <span>NEW</span>
+                            </li>
+                            <li><a href="">NFT Aggregator</a>
+                                <span>NEW</span></li>
+                        </ul>
+                    </div>
+                    <div class="accordion">Pages
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <div class="content">
+                        <ul>
+                            <li><a href="">Home 1</a></li>
+                            <li><a href="">Home 1 RTL</a></li>
+                            </li>
+                            <li><a href="">DAO Platform</a>
+                                <span>NEW</span>
+                            </li>
+                            <li><a href="">Crypto App</a>
+                                <span>NEW</span>
+                            </li>
+                            <li><a href="">Crypto Trading</a>
+                                <span>NEW</span>
+                            </li>
+                            <li><a href="">ICO Landing</a>
+                                <span>NEW</span>
+                            </li>
+                            <li><a href="">NFT Aggregator</a>
+                                <span>NEW</span></li>
+                        </ul>
+                    </div>
+                    <div class="accordion">Explore
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <div class="content">
+                        <ul>
+                            <li><a href="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                                        class="h-4 w-4 fill-jacarta-700">
+                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                        <path
+                                            d="M22 12.999V20a1 1 0 0 1-1 1h-8v-8.001h9zm-11 0V21H3a1 1 0 0 1-1-1v-7.001h9zM11 3v7.999H2V4a1 1 0 0 1 1-1h8zm10 0a1 1 0 0 1 1 1v6.999h-9V3h8z">
+                                        </path>
+                                    </svg>
+                                    All NFTs
+                                </a></li>
+                            <li><a href="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                                        class="h-4 w-4 fill-[#10B981]">
+                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                        <path
+                                            d="M12 2c5.522 0 10 3.978 10 8.889a5.558 5.558 0 0 1-5.556 5.555h-1.966c-.922 0-1.667.745-1.667 1.667 0 .422.167.811.422 1.1.267.3.434.689.434 1.122C13.667 21.256 12.9 22 12 22 6.478 22 2 17.522 2 12S6.478 2 12 2zm-1.189 16.111a3.664 3.664 0 0 1 3.667-3.667h1.966A3.558 3.558 0 0 0 20 10.89C20 7.139 16.468 4 12 4a8 8 0 0 0-.676 15.972 3.648 3.648 0 0 1-.513-1.86zM7.5 12a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm9 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM12 9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z">
+                                        </path>
+                                    </svg>
+                                    Art
+                                </a></li>
+                            <li><a href="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                                        class="h-4 w-4 fill-[#FEB240]">
+                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                        <path
+                                            d="M17.5 2a4.5 4.5 0 0 1 2.951 7.897c.355.967.549 2.013.549 3.103A9 9 0 1 1 3.55 9.897a4.5 4.5 0 1 1 6.791-5.744 9.05 9.05 0 0 1 3.32 0A4.494 4.494 0 0 1 17.5 2zm0 2c-.823 0-1.575.4-2.038 1.052l-.095.144-.718 1.176-1.355-.253a7.05 7.05 0 0 0-2.267-.052l-.316.052-1.356.255-.72-1.176A2.5 2.5 0 1 0 4.73 8.265l.131.123 1.041.904-.475 1.295A7 7 0 1 0 19 13c0-.716-.107-1.416-.314-2.083l-.112-.33-.475-1.295 1.04-.904A2.5 2.5 0 0 0 17.5 4zM10 13a2 2 0 1 0 4 0h2a4 4 0 1 1-8 0h2z">
+                                        </path>
+                                    </svg>
+                                    Collectibles
+                                </a></li>
+                            <li><a href="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                                        class="h-4 w-4 fill-[#8358FF]">
+                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                        <path
+                                            d="M5 15v4h4v2H3v-6h2zm16 0v6h-6v-2h4v-4h2zm-8.001-9l4.4 11h-2.155l-1.201-3h-4.09l-1.199 3H6.6l4.399-11h2zm-1 2.885L10.752 12h2.492l-1.245-3.115zM9 3v2H5v4H3V3h6zm12 0v6h-2V5h-4V3h6z">
+                                        </path>
+                                    </svg>
+                                    Domain Names
+                                </a></li>
+                            <li><a href="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                                        class="h-4 w-4 fill-[#F35BC7]">
+                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                        <path d="M12 13.535V3h8v3h-6v11a4 4 0 1 1-2-3.465z"></path>
+                                    </svg>
+                                    Music
+                                </a></li>
+                            <li><a href="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                                        class="h-4 w-4 fill-[#428AF8]">
+                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                        <path
+                                            d="M2 6c0-.552.455-1 .992-1h18.016c.548 0 .992.445.992 1v14c0 .552-.455 1-.992 1H2.992A.994.994 0 0 1 2 20V6zm2 1v12h16V7H4zm10 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 2a5 5 0 1 1 0-10 5 5 0 0 1 0 10zM4 2h6v2H4V2z">
+                                        </path>
+                                    </svg>
+                                    Photography
+                                </a></li>
+                        </ul>
+                    </div>
+                    <div class="accordion">Resources
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <div class="content">
+                        <ul>
+                            <li><a href="">Home 1</a></li>
+                            <li><a href="">Home 1 RTL</a></li>
+                            <li><a href="">Home 2</a></li>
+                            <li><a href="">Home 3</a></li>
+                            <li><a href="">Home 4</a></li>
+                            <li><a href="">Home 5</a></li>
+                            <li><a href="">Home 6</a></li>
+                            <li><a href="">Crypto Consultant</a></li>
+                            <li><a href="">NFT Game</a>
+                            </li>
+                            <li><a href="">DAO Platform</a>
+                            </li>
+                            <li><a href="">Crypto App</a>
+                            </li>
+                            <li><a href="">Crypto Trading</a>
+                            </li>
+                            <li><a href="">ICO Landing</a>
+                            </li>
+                            <li><a href="">NFT Aggregator</a>
+                        </ul>
+                    </div>
+                    <div class="accordion">Create</div>
+                    <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, alias.</div>
+                </div>
+                <div class="btnWallet">
+                    <a href="">
+                        Connect Wallet
+                    </a>
+                </div>
+                <div class="links">
+                    <ul>
+                        <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-discord"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-tiktok"></i></a></li>
+                    </ul>
+                </div>
+            </div>
             <div class="allHeader">
                 <div class="left">
                     <div class="logo">
@@ -302,44 +489,25 @@
                     </div>
                     <div class="icons">
                         <ul>
-                            <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
-                                        height="18"
-                                        class="h-4 w-4 fill-jacarta-700 transition-colors group-hover:fill-white group-focus:fill-white dark:fill-white">
-                                        <path fill="none" d="M0 0h24v24H0z"></path>
-                                        <path
-                                            d="M22 6h-7a6 6 0 1 0 0 12h7v2a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v2zm-7 2h8v8h-8a4 4 0 1 1 0-8zm0 3v2h3v-2h-3z">
-                                        </path>
-                                    </svg></a></li>
                             <li><a href="">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="18"
-                                        class="h-4 w-4 fill-jacarta-700 transition-colors group-hover:fill-white group-focus:fill-white dark:fill-white">
-                                        <path fill="none" d="M0 0h24v24H0z"></path>
-                                        <path
-                                            d="M11 14.062V20h2v-5.938c3.946.492 7 3.858 7 7.938H4a8.001 8.001 0 0 1 7-7.938zM12 13c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6z">
-                                        </path>
-                                    </svg>
+                                    <i class="fa-solid fa-wallet"></i>
                                 </a></li>
                             <li><a href="">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="18"
-                                        class="dark-mode-light h-4 w-4 fill-jacarta-700 transition-colors group-hover:fill-white group-focus:fill-white dark:hidden">
-                                        <path fill="none" d="M0 0h24v24H0z"></path>
-                                        <path
-                                            d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.662 17.854 17.316 22 12.001 22 6.477 22 2 17.523 2 12c0-5.315 4.146-9.661 9.38-9.981z">
-                                        </path>
-                                    </svg>
+                                    <i class="fa-regular fa-user"></i>
+                                </a></li>
+                            <li><a href="">
+                                    <i class="fa-solid fa-moon"></i>
                                 </a></li>
                             <li class="bar-icon">
-                                <a href="">
-                                    <i class="fa-solid fa-bars"></i>
-                                </a>
+                                <i id="hamburger" class="fa-solid fa-bars"></i>
                             </li>
                         </ul>
-
                     </div>
                 </div>
             </div>
         </div>
     </header>
+
 
 
     <section class="buyNft">
@@ -1387,5 +1555,10 @@
             </div>
         </div>
     </footer>
+
+
+    <script src="app.js"></script>
+
 </body>
+
 </html>

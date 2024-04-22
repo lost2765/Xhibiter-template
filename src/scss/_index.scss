@@ -248,7 +248,7 @@
                     .hoverText {
                         position: absolute;
                         top: 100%;
-                        left: 0;
+                        right: 0;
                         width: 200px;
                         opacity: 0;
                         visibility: hidden;
@@ -850,6 +850,8 @@
     }
 
     .hotBids {
+        margin-top: 0;
+
         .items {
             .item {
                 img {
@@ -883,6 +885,8 @@
             }
 
             .items {
+                margin-top: 30px;
+
                 .item {
                     width: 100%;
                 }
@@ -891,6 +895,7 @@
     }
 
     .Trendingcategories {
+        margin-top: 2rem;
         .contentCategory {
             .topContent {
                 justify-content: flex-start;
@@ -938,7 +943,10 @@
     }
 }
 
-@media (min-width:576px) and (max-width:768px) {
+
+
+
+@media (min-width:576px) and (max-width:992px) {
     .container {
         width: 90%;
     }
@@ -989,6 +997,7 @@
     }
 
     .Trendingcategories {
+        margin-top: 20px;
         .contentCategory {
             .topContent {
                 justify-content: center;
@@ -1012,12 +1021,12 @@
 
                 .right {
                     width: 100%;
-                    margin-left: 138px;
+                    margin-left: 135px;
+                    margin-top: 0;
 
                     a {
                         display: inline-block;
                         padding: 8px;
-                        margin-top: 8px;
                     }
                 }
             }
@@ -1033,6 +1042,7 @@
 
     .createNft {
         .items {
+            margin-top: 30px;
 
             .item,
             .item2,
@@ -1044,9 +1054,9 @@
         }
     }
 
-    .subscribe{
-        .allContent{
-            .forms{
+    .subscribe {
+        .allContent {
+            .forms {
                 width: 70%;
             }
         }

@@ -1,11 +1,207 @@
 .header {
     width: 100%;
-    height: 80px;
+    height: 90px;
     position: fixed;
     left: 0;
     top: 0;
     z-index: 3;
-    background: #eef1fae6;
+
+    &.sticky {
+        /* Ваши стили для прикрепленного заголовка */
+        position: fixed;
+        padding: 5px 20px;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: #ffffffbf;
+        // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: .2s ease-in-out;
+    }
+
+
+
+    .burgerMenu {
+        overflow-y: scroll;
+        position: fixed;
+        left: 0px;
+        padding: 30px 11px;
+        top: 0px;
+        z-index: 77;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        opacity: 0;
+        visibility: hidden;
+        transition: .3s ease-in-out;
+
+        &.active {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .left {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+
+            .logo {
+                width: 130px;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .fa-solid {
+                border-radius: 100%;
+                border: 1px solid #ccc;
+                padding: 11px 12px;
+                cursor: pointer;
+                transition: cubic-bezier(0.075, 0.82, 0.165, 1) 2s;
+
+                &:hover {
+                    background: #6e40ec;
+                }
+            }
+        }
+
+        .searchInput {
+            width: 100%;
+            margin-top: 1rem;
+
+            .form {
+                width: 100%;
+                color: #ccc;
+                border-radius: 10px;
+                position: relative;
+
+                .iconInput {
+                    position: absolute;
+                    left: 10px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+
+                input {
+                    border: 1px solid #ccc;
+                    outline-color: blue;
+                    padding: 13px 40px;
+                    width: 100%;
+                    border-radius: 10px;
+                }
+            }
+        }
+
+        .bottomLinks {
+            margin-top: 2rem;
+
+            .accordion {
+                padding: 15px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                &:hover {
+                    color: #6e40ec;
+                }
+            }
+
+            .content {
+                max-height: 0;
+                overflow: hidden;
+                transition: .2S ease-in-out;
+                padding-left: 20px;
+
+
+                ul {
+
+                    li {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-top: 1rem;
+                        padding: 3px;
+                        border-radius: 10px;
+
+                        &:hover {
+                            background-color: #e9e6e6;
+                        }
+
+                        a {
+                            color: #000;
+                        }
+                    }
+                }
+
+                span {
+                    display: inline;
+                    color: #fff;
+                    background: green;
+                    font-size: 10px;
+                    text-transform: uppercase;
+                    padding: 5px;
+                    border-radius: 10px;
+                }
+            }
+        }
+
+
+        .btnWallet {
+            display: flex;
+            justify-content: center;
+            margin-top: 4rem;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 2rem;
+
+            a {
+                text-align: center;
+                background-color: #8358FF;
+                color: #fff;
+                border-radius: 30px;
+                padding: .75rem 2rem;
+                width: 100%;
+
+
+                box-shadow: 5px 5px 10px rgba(108, 106, 212, .25),
+                    inset 2px 2px 6px #a78df0,
+                    inset -5px -5px 10px #6336e4;
+                transition: .1s ease-in;
+
+                &:hover {
+                    box-shadow: 2px 2px 5px 1px rgba(152, 144, 144, 0.75);
+                    background: #7148eb;
+
+                }
+            }
+        }
+
+        .links {
+            margin-top: 2rem;
+
+            ul {
+                display: flex;
+                justify-content: center;
+                gap: 18px;
+
+                li {
+                    a {
+                        color: #757575;
+
+                        i {
+                            font-size: 20px;
+
+                            &:hover {
+                                color: #6e40ec;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 
     .allHeader {
         display: flex;
@@ -35,6 +231,7 @@
                     border-radius: 10px;
                     position: relative;
 
+
                     .iconInput {
                         position: absolute;
                         left: 10px;
@@ -48,6 +245,8 @@
                         padding: 13px 40px;
                         width: 100%;
                         border-radius: 10px;
+                        border: 1px solid #ccc !important;
+
                     }
                 }
             }
@@ -72,6 +271,8 @@
                                     ul {
                                         visibility: visible;
                                         opacity: 1;
+                                        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+                                        transition: .3s ease-in;
                                     }
                                 }
 
@@ -85,11 +286,14 @@
                                     border-radius: 10px;
 
 
+
                                     li {
+
                                         a {
                                             padding: 10px;
                                             font-size: 12px;
                                             display: block;
+
                                         }
                                     }
                                 }
@@ -98,7 +302,7 @@
                                     background: rgb(4, 175, 4);
                                     color: #fff;
                                     text-transform: uppercase;
-                                    padding: 4px;
+                                    padding: 2px;
                                     border-radius: 5px;
                                     margin-left: 20px;
                                     font-size: 10px;
@@ -124,6 +328,8 @@
                                 ul {
                                     visibility: visible;
                                     opacity: 1;
+                                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+                                    transition: .3s ease-in;
                                 }
                             }
 
@@ -150,7 +356,7 @@
                                 background: rgb(4, 175, 4);
                                 color: #fff;
                                 text-transform: uppercase;
-                                padding: 4px;
+                                padding: 2px;
                                 border-radius: 5px;
                                 margin-left: 20px;
                                 font-size: 10px;
@@ -165,6 +371,8 @@
                                 ul {
                                     visibility: visible;
                                     opacity: 1;
+                                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+                                    transition: .3s ease-in;
                                 }
                             }
 
@@ -210,22 +418,37 @@
         .icons {
             ul {
                 display: flex;
-                gap: 20px;
+                gap: 10px;
                 align-items: center;
 
 
                 li {
+                    a {
+                        padding: 5px 10px;
+
+                    }
+
                     &.bar-icon {
                         display: none;
+                        border: 1px solid #ccc;
+                        border-radius: 100%;
+                        padding: 5px 10px;
+                        background: #ffffff;
+                        cursor: pointer;
+                        transition: cubic-bezier(0.075, 0.82, 0.165, 1) 2s;
+
+                        &:hover {
+                            background: #6e40ec;
+                        }
                     }
 
                     a {
-                        padding: 10px;
+                        padding: 10px 12px;
+                        color: #000;
                         border-radius: 100%;
                         border: 1px solid #ccc;
                         width: 10%;
                         height: 15%;
-                        padding-top: 1rem;
                         background-color: #fff;
 
                         &:hover {
@@ -240,10 +463,24 @@
 }
 
 
+
 @media (max-width:576px) {
     .header {
         padding-top: 2rem;
         width: 100%;
+
+        &.sticky {
+            /* Ваши стили для прикрепленного заголовка */
+            position: fixed;
+            padding: 31px 0;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: #ffffffbf;
+            // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: .2s ease-in-out;
+        }
 
         .allHeader {
             .left {
@@ -288,11 +525,23 @@
 
 
 
-@media (min-width:576px) and (max-width:768px) {
+@media (min-width:576px) and (max-width:992px) {
     .header {
         height: 100px;
         padding-top: 2rem;
         width: 100%;
+
+        &.sticky {
+            position: fixed;
+            padding: 31px 0;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: #ffffffbf;
+            // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: .2s ease-in-out;
+        }
 
         .allHeader {
 
